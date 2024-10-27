@@ -22,12 +22,20 @@
             position: relative;
             width: 80%;
             max-width: 800px;
+            padding: 20px 10px;
             height: 300px; /* Adjust height to fit two rows plus header */
-            overflow: auto;
+           
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
+        }
+        .table-container {
+             overflow: auto;
+             height: 200px;
+             height: fit-content;
+             padding: 0;
+             margin-bottom: 20px;
         }
         .record-container{
             display: flex;
@@ -35,12 +43,13 @@
             align-items: left;
             padding-left: 30px;
             justify-content: top;
+            margin-top: 15px;
         }
         .record-container h2 {
             margin-top: 0;
             color: #4CAF50;
             margin-top: 20px;
-            font-size: 20px;
+            font-size: 15px;
 
         }
         .record-container p {
@@ -102,6 +111,56 @@
         .refresh_text{
             color: #2c652e;
         }
+
+        @media (max-width: 680px) {
+
+            .logo {
+                display: none;
+            }
+
+
+        }
+
+        @media only screen and (max-width: 480px) and (orientation: portrait) {
+
+            .record-container h2 {
+                font-size: 16px;
+            }
+
+            
+            .record-container p {
+                font-size: 14px;
+            }
+
+            .Title1 {
+                font-size: 16px;
+                
+            }
+
+
+        }
+
+        
+
+        @media only screen and (max-width: 539px) {
+            body {
+                padding: 10px;
+            }
+            .table-container {
+                font-size: 16px;
+                padding: 15px 5px;
+            }
+
+            .table-container tr th, tr {
+                font-size: 10px;
+
+            }
+
+            .table-container   {
+                padding: 0;
+            }
+        }
+
         
     </style>
 </head>
@@ -126,7 +185,7 @@
    
     <h2 class="Title1">Styled Table</h2>
     <div class="table-container">
-        <table id="myTable">
+        <table id="myTable" class="myTablec">
             <tr>
                 <th class="c1">Column 1</th>
                 <th class="c2">Column 2</th>
